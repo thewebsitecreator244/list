@@ -6,6 +6,7 @@ const tasklist = document.querySelector(".task-list")
 function addNewTask(event){
     event.preventDefault();
     const task = formtask.value;
+    if (!task) return
     const newItem = document.querySelector("#template").cloneNode(true).content;
     newItem.querySelector(".task__text").value = task;
     newItem.querySelector(".task__delete").addEventListener("click",deleteTask);
@@ -18,7 +19,5 @@ function addNewTask(event){
 function deleteTask(event) {
     let target = event.target.parentElement
     target.remove()
-    
-    
 }
 addbutton.addEventListener("click",addNewTask);
