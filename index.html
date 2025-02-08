@@ -12,12 +12,17 @@
 <body class="body">
     <div class="app">
         <form class="form">
-            <input type="text" class="form-task" placeholder="Добавить запись">
+            <input type="text" class="form-task" placeholder="add note">
             <button class="button"></button>
         </form>
         <ul class="task-list"></ul>
     </div>
-
+    <template id="template">
+        <li class="task">
+            <input type="text" class="task__text" value="">
+            <button class="task__delete"></button>
+        </li>
+    </template>
     <script src="./script.js"></script>
 </body>
 
